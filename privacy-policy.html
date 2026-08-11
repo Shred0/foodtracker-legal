@@ -21,50 +21,86 @@
 <body>
 
 <h1 id="english">Food Tracker — Privacy Policy</h1>
-<p class="muted">Effective date: 15 July 2026 · Developer: Omar Della Mazza · Contact: <a href="mailto:omardellamazza@gmail.com">omardellamazza@gmail.com</a></p>
+<p class="muted">Effective date: 11 August 2026 · Developer: ShreddedOnion · Contact: <a href="mailto:privacy@shreddedonion.com">privacy@shreddedonion.com</a></p>
 
-<p><strong>Summary:</strong> Food Tracker stores everything you enter only on your device. The developer has no server and never receives your data. The only third parties involved are Google AdMob (advertising banner on Android/iOS, unless you purchase its removal) and the anonymous lookups you trigger toward Open Food Facts and the Frankfurter exchange-rate API.</p>
+<p><strong>Summary:</strong> Food Tracker keeps everything you enter on your device. The developer runs no server, has no user accounts, and never receives your data. There is no analytics, no telemetry and no crash-reporting service in the app. Some data leaves your device only through features you switch on yourself — an online food lookup, an AI photo scan sent to a provider whose key you supply, a backup to a location you choose, or a file you share with your nutritionist — and each of those is described below. On Android and iOS an advertising banner is shown unless you buy its removal.</p>
 
-<h2>1. Data stored on your device only</h2>
-<p>The app lets you record meals, foods, recipes, body weight, water intake, a personal profile (sex, birth date, height, weight, activity level, goals), weekly meal plans, app settings and an internal error log. All of this is saved exclusively:</p>
+<h2>1. What the app stores, and where</h2>
+<p>The app lets you record meals, foods and recipes, body weight, water intake, physical activity, a personal profile (sex, birth date, height, weight, activity level, goals) and any additional profiles you create, weekly meal plans, your pantry (stock and expiry dates), shopping lists, food spending, achievements, health metrics imported from your device's health store, app settings and an internal error log.</p>
+<p>All of it is saved exclusively:</p>
 <ul>
     <li>in the app's private storage on your device, or</li>
     <li>in a folder you explicitly choose (optional feature).</li>
 </ul>
-<p>This data — including health-related values such as weight and nutrition intake — is never transmitted to the developer or to any server. Backups and exports are created only when you request them and are shared only through the channels you choose. You can delete everything at any time by deleting the data files or uninstalling the app (data in a folder you chose remains under your control in that folder).</p>
+<p><strong>This data — including health-related values such as weight, nutrition and activity — is never transmitted to the developer, and there is no server belonging to the developer for it to be transmitted to.</strong> It leaves your device only through the optional features in sections 2 to 5, each of which you control and none of which is on by default. Exports and backups are created only when you ask for them and go only where you send them.</p>
+<p>You can delete everything at any time by deleting the data files or uninstalling the app. Data in a folder you chose stays in that folder, under your control.</p>
 
-<h2>2. Advertising (Google AdMob — Android and iOS only)</h2>
+<h2>2. Online food and currency lookups</h2>
+<ul>
+    <li><strong>Open Food Facts</strong> (<a href="https://openfoodfacts.org">openfoodfacts.org</a>): when you scan a barcode or search a product by name, only that barcode or search text is sent, so the product's nutrition data can be returned. Food data is provided under the Open Database License (ODbL).</li>
+    <li><strong>Frankfurter API</strong> (<a href="https://frankfurter.dev">frankfurter.dev</a>): when you change currency, only the currency codes are sent to fetch the exchange rate (European Central Bank reference rates).</li>
+</ul>
+<p>These requests contain no personal data beyond the technical information inherent to any internet request, such as your IP address being visible to the contacted server. Reading a nutrition label with the camera is done entirely on your device and sends nothing.</p>
+
+<h2>3. AI food recognition (optional, off by default)</h2>
+<p>The app can identify foods from a photo. This feature is disabled until you choose a provider in <em>Options → AI scanner</em>, and it works in one of three ways:</p>
+<ul>
+    <li><strong>With your own API key</strong> (Anthropic, OpenAI or Google Gemini): the photo and a text prompt are sent directly from your device to that provider. The key is yours, so the processing relationship is between you and that provider, under their terms and privacy policy — the developer is not a party to it and never sees the photo, the key or the response.</li>
+    <li><strong>LogMeal</strong>: the photo is sent to <a href="https://logmeal.com">LogMeal</a> under your own account with them, on the same basis.</li>
+    <li><strong>Copy the prompt to any AI chat</strong>: the app makes <em>no network request at all</em>. It copies a text prompt to your clipboard for you to paste, together with the photo, into an AI service you already use, and then reads back the answer you paste into the app.</li>
+</ul>
+<p><strong>Please note what a photo can contain.</strong> You are photographing a plate, but the image may also capture faces, documents, your home or anything else in frame, and it is sent as it is. Review the photo before sending it, and be aware that the receiving provider decides how long it retains it.</p>
+<p>API keys you enter are stored in your device's secure keystore where the platform provides one (Android Keystore, iOS Keychain), and in the app's own private settings where it does not. They are never written to your save files, exports or backups, and are never transmitted anywhere except to the provider they belong to.</p>
+
+<h2>4. Backups (optional, off by default)</h2>
+<p>You can create a backup containing a full copy of your app data — including health-related values. Where it goes is your choice, and the developer never receives it or has any means of reading it:</p>
+<ul>
+    <li><strong>To a folder you pick.</strong> The file is written to that folder and nothing else happens. If the folder you pick is synchronised by a cloud service (Google Drive, OneDrive, Dropbox and similar), that service will upload the file under your own account and its terms and privacy policy then apply to it.</li>
+    <li><strong>To your own Google Drive</strong>, where this option is available in your version: the app signs you in with your Google account and writes only to the <em>application data folder</em>, a private area of your Drive that other apps cannot read and that does not appear among your Drive files. The app requests only the <code>drive.appdata</code> scope, which gives it no access to the rest of your Drive. The sign-in token is held in your device's secure keystore and you can revoke access at any time from your Google account settings.</li>
+    <li><strong>To your own iCloud</strong>, where this option is available in your version: the file is written to the app's private iCloud container under your Apple account.</li>
+</ul>
+<p>Automatic backups, if you enable them, run at most once a day and go to the same destination you selected.</p>
+
+<h2>5. Sharing with a nutritionist (optional, off by default)</h2>
+<p>The app can export a meal plan or a progress report as a file and share it — through your device's share sheet, or by writing it into a shared folder you have set up. This happens only when you ask for it, once per file. A progress report contains the nutrition, weight and adherence data for the period you select. If the shared folder is synchronised by a cloud service, that service's terms apply to the file, exactly as in section 4. There is no server, no account and no automatic synchronisation between a nutritionist and a client: files move only when a person sends them.</p>
+
+<h2>6. Health Connect and Apple Health (optional, off by default)</h2>
+<p>Where your device provides a health store, the app can exchange data with it. This is disabled until you enable it and grant the permissions, and it happens entirely on your device — <strong>nothing in this section is transmitted anywhere</strong>.</p>
+<ul>
+    <li><strong>Writing:</strong> meals, water intake, body weight and activity sessions you have logged are copied into your health store, so other apps you have authorised can read them.</li>
+    <li><strong>Reading</strong> (a separate opt-in): body weight and height, workouts, steps, sleep and heart rate are imported into the app. Steps, sleep and heart rate are stored as daily summaries, never as individual measurements. Nutrition data is deliberately not imported.</li>
+    <li>You can turn either direction off, or revoke the permissions in your device's health settings, at any time.</li>
+</ul>
+<p><strong>Health data is never shared with the advertising component described in section 7, nor with any analytics or attribution service — none is present in the app.</strong> Health data is used only to show you your own information inside the app, and leaves your device only if you yourself put it in a backup or an export, as described in sections 4 and 5.</p>
+
+<h2>7. Advertising (Google AdMob — Android and iOS only)</h2>
 <p>The mobile versions of the app show a banner provided by Google AdMob. To serve and measure ads, Google and its partners may collect device information such as advertising identifiers, IP address, coarse location derived from it, and ad-interaction data. This collection is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses data from partner apps</a>.</p>
+<p>The advertising component receives no data you have entered in the app: not your meals, your profile, your weight, your health data or anything derived from them.</p>
 <ul>
     <li><strong>European Economic Area / UK:</strong> ads are served only in accordance with the choice you make in the Google consent dialog (Google UMP) shown in the app. You can review or change that choice at any time from <em>Options → Manage ads consent</em>.</li>
     <li><strong>iOS:</strong> the system App Tracking Transparency prompt lets you refuse tracking; ads are then non-personalized.</li>
     <li><strong>Remove ads:</strong> the one-time in-app purchase removes the banner and, with it, this data collection.</li>
 </ul>
 
-<h2>3. Online food and currency lookups</h2>
-<ul>
-    <li><strong>Open Food Facts</strong> (<a href="https://openfoodfacts.org">openfoodfacts.org</a>): when you scan a barcode or search a product by name, only that barcode or search text is sent, so the product's nutrition data can be returned. Food data is provided under the Open Database License (ODbL).</li>
-    <li><strong>Frankfurter API</strong> (<a href="https://frankfurter.dev">frankfurter.dev</a>): when you change currency, only the currency codes are sent to fetch the exchange rate (European Central Bank reference rates).</li>
-</ul>
-<p>These requests contain no personal data beyond the technical information inherent to any internet request (such as your IP address, visible to the contacted server).</p>
-
-<h2>4. Purchases</h2>
+<h2>8. Purchases</h2>
 <p>The "Remove ads" purchase is processed entirely by Google Play or the Apple App Store. The developer never receives your payment details.</p>
 
-<h2>5. Permissions</h2>
+<h2>9. Permissions</h2>
 <ul>
-    <li><strong>Camera:</strong> used only to scan product barcodes; images are processed on the device and never stored or transmitted.</li>
-    <li><strong>Notifications:</strong> meal reminders are generated locally on the device.</li>
-    <li><strong>Folder access:</strong> only the folder you explicitly pick for data storage is accessed.</li>
+    <li><strong>Camera:</strong> used to scan product barcodes, to read a nutrition label, and to photograph a meal for the AI scanner. Barcode and label images are processed on your device and are neither stored nor transmitted. A meal photo is transmitted only in the case described in section 3, and only to the provider you configured.</li>
+    <li><strong>Notifications:</strong> meal reminders and pantry expiry reminders are generated locally on your device. No notification content is sent anywhere.</li>
+    <li><strong>Folder access:</strong> only the folders you explicitly pick — for data storage, for backups, or for sharing with a nutritionist — are accessed.</li>
+    <li><strong>Health permissions:</strong> requested only if you enable the health-store feature in section 6, and only for the data types you select there.</li>
+    <li><strong>Internet:</strong> used for the features described in sections 2 to 5 and for advertising. With those features off and ads removed, the app does not need to be online.</li>
 </ul>
 
-<h2>6. Children</h2>
+<h2>10. Children</h2>
 <p>The app is not directed at children under 13 (or the equivalent minimum age in your jurisdiction) and does not knowingly collect data from them.</p>
 
-<h2>7. Your rights (GDPR)</h2>
-<p>Because your data never leaves your device, access, rectification and erasure are entirely in your hands within the app. For anything concerning data processed by Google (advertising), the mechanisms in section 2 apply. For any privacy question or request you can contact the developer at the address above. You also have the right to lodge a complaint with your data protection authority.</p>
+<h2>11. Your rights (GDPR)</h2>
+<p>The developer is not in possession of your data and therefore cannot access, alter or erase it for you: access, rectification and erasure are entirely in your hands within the app, which can export or delete everything it holds. Where you have chosen to send data to a third party — an AI provider (section 3), a cloud storage service (sections 4 and 5), or a person you shared a file with — you exercise your rights directly with them, under their own policies. For anything concerning data processed by Google for advertising, the mechanisms in section 7 apply. For any privacy question you can contact the developer at the address above, and you have the right to lodge a complaint with your data protection authority.</p>
 
-<h2>8. Changes</h2>
+<h2>12. Changes</h2>
 <p>Material changes to this policy will be published at this address and highlighted in the app, which will ask for a new acknowledgement.</p>
 
 </body>
