@@ -3,6 +3,11 @@
 Public legal documents for the [Food Tracker](https://github.com/Shred0/FoodTracker) app, served via GitHub Pages.
 
 - [Privacy Policy](https://legal.shreddedonion.com/privacy-policy.html) (English)
+- [Deleting your data](https://legal.shreddedonion.com/data-deletion.html) (English) — the URL given in the
+  Play Console Data safety section. Optional for this app (there is no account and no server-held data),
+  but it earns the "you can request that your data be deleted" line on the store listing and is the only
+  place that explains the two non-obvious cases: data in a user-picked folder survives uninstall, and
+  backups live wherever the user sent them.
 
 Served by GitHub Pages from this repo through the custom domain in `CNAME`
 (`legal.shreddedonion.com`). **Always publish the app pointing at the custom domain, never at

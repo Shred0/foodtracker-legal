@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Tracker — Deleting your data</title>
+<style>
+    :root { color-scheme: light dark; }
+    body {
+        font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        max-width: 760px; margin: 0 auto; padding: 24px 16px 64px;
+        line-height: 1.55;
+    }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; margin-top: 2em; }
+    .muted { opacity: 0.7; font-size: 0.9rem; }
+    a { color: #1976d2; }
+</style>
+</head>
+<body>
+
+<h1>Food Tracker — Deleting your data</h1>
+<p class="muted">Last updated: 12 August 2026 · Developer: ShreddedOnion · Contact: <a href="mailto:privacy@shreddedonion.com">privacy@shreddedonion.com</a></p>
+
+<p><strong>There is no account to delete, and nothing of yours is held by the developer.</strong> Food Tracker has no sign-in and no server: everything you record stays on your device, so deleting it is something you do yourself, immediately, without asking anyone's permission or waiting for a request to be processed. This page explains exactly how, and what remains afterwards.</p>
+
+<h2>Deleting individual records</h2>
+<p>Meals, foods, weight entries, activities, pantry items and every other record can be deleted from their own list inside the app. The meal, water, weight and activity lists also have a "delete older than" button that removes everything before a date you choose.</p>
+<p>Be aware of what this does: removing a record takes it out of the app, but the app's data file is not rewritten byte by byte, so the entry may still exist inside that file on your device until the file itself is deleted. To erase everything rather than hide it, use one of the next two sections.</p>
+
+<h2>Deleting everything</h2>
+<ul>
+    <li><strong>If the app stores data in its own private storage</strong> (the default): uninstalling Food Tracker deletes it. Android removes an app's private storage with the app, and nothing survives the uninstall.</li>
+    <li><strong>If you chose your own folder</strong> for the app's data (Options → Storage): that folder is yours and is deliberately left alone. Uninstalling does not touch it. Delete the <code>FoodTrackerSave_*.json</code> files in it, or the folder itself, using your file manager.</li>
+</ul>
+
+<h2>Backups and exports you created</h2>
+<p>Backups, exports, shared plans and progress reports are files you asked the app to create, and they live wherever you sent them — a folder on your device, a folder synchronised by a cloud service, your own Google Drive, your own iCloud, or a message you shared them through. <strong>They are not removed by uninstalling the app</strong>, because the app does not control them. Delete them in the same place you put them.</p>
+<p>If you connected the app to your own Google Drive, you can also revoke its access entirely from your Google account's security settings, which prevents any further backup being written.</p>
+
+<h2>API keys you entered</h2>
+<p>If you configured a key for the AI photo scanner, it is held in your device's secure keystore. Clear it from Options → AI scanner, or uninstall the app.</p>
+
+<h2>Advertising identifiers</h2>
+<p>The advertising banner is served by Google AdMob, which uses your device's advertising identifier. That identifier belongs to your device and to Google rather than to Food Tracker, so the app cannot delete it. You can delete or reset it from your Android settings (<em>Settings → Google → All services → Ads</em>), review your choices from <em>Options → Manage ads consent</em> in the app, or remove the banner and its data collection entirely with the one-time in-app purchase.</p>
+
+<h2>What is retained, and for how long</h2>
+<p><strong>Nothing, by the developer.</strong> There is no server, no account, no analytics and no backup of your data anywhere outside the places you chose, so there is no retention period to state and no request to make. Data you deleted is gone as soon as you delete the file holding it; data you placed in a folder or a cloud service of your own is retained for as long as you keep it there, under that service's terms.</p>
+
+<h2>Questions</h2>
+<p>Write to <a href="mailto:privacy@shreddedonion.com">privacy@shreddedonion.com</a>. See also the <a href="privacy-policy.html">Privacy Policy</a> for what the app does and does not transmit.</p>
+
+</body>
+</html>
